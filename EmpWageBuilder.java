@@ -4,14 +4,19 @@ public class EmpWageBuilder
 	{
 		System.out.println("Welcome to the Employee Wage Computation");
 			//constants
-			int FULL_TIME=1;
+			int PART_TIME=1;
+			int FULL_TIME=2;
 			int EMP_RATE_PER_HOUR=20;
 			// Variables
 			int empHrs=0;
 			int empWage=0;
 			//Computation
-				double empCheck=Math.floor(Math.random()*10)%2;
-				if(empCheck==FULL_TIME)
+				double empCheck=Math.floor(Math.random()*10)%3;
+				if(empCheck==PART_TIME)
+				{
+						empHrs=4;
+				}
+				else if(empCheck==FULL_TIME)
 				{
 						empHrs=8;
 				}
